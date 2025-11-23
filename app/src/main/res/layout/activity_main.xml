@@ -8,28 +8,12 @@
     android:background="#4CFFFFFF"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/editTxtNumber"
-        android:layout_width="265dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="50dp"
-        android:ems="10"
-        android:hint="Please enter a number"
-        android:inputType="number|numberSigned"
-        android:textColorLink="#AD673AB7"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtRemainingAttempts" />
-
     <TextView
         android:id="@+id/txtRemainingAttempts"
         android:layout_width="265dp"
         android:layout_height="46dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="175dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="50dp"
         android:text="Remaining attempts: 3"
         android:textAlignment="textStart"
@@ -53,7 +37,8 @@
         app:layout_constraintBottom_toTopOf="@+id/txtResult"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTxtNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/editTxtNumber"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txtResult"
@@ -61,11 +46,42 @@
         android:layout_height="46dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="175dp"
+        android:layout_marginBottom="224dp"
         android:textAlignment="textStart"
         android:textColor="#673AB7"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTxtNumber"
+        android:layout_width="265dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:hint="Please enter a number"
+        android:inputType="number|numberSigned"
+        android:textColorLink="#AD673AB7"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRemainingAttempts" />
+
+    <ImageButton
+        android:id="@+id/btnRestart"
+        android:layout_width="87dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/restart"
+        android:onClick="restart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResult"
+        app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
