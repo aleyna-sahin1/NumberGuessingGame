@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         Random random = new Random();
         randomNumber = random.nextInt(5) + 1;
         System.out.println("Random number : " + randomNumber);
+        binding.editTxtNumber.requestFocus();
 
 
     }
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        if (remainAttempt>0) {
+        if (remainAttempt > 0) {
             binding.txtRemainingAttempts.setText("Remaining attempts: " + remainAttempt);
         } else {
             binding.txtRemainingAttempts.setText("Remaining attempts: " + 0);
@@ -72,8 +73,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    public void restart(View view){
-        AlertDialog.Builder alert= new AlertDialog.Builder(this);
+
+    public void restart(View view) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setMessage("Are you sure you want to restart the game?");
         alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
